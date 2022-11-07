@@ -1,8 +1,26 @@
-<p>Change PIN</p>
+<h3 class="header">Change PIN</h3>
 
-<ng-container [formGroup]="frmGroup">
-  <mat-form-field appearance="legacy">
-    <mat-label>Old PIN</mat-label>
-    <input matInput placeholder="old pin" formControlName="frmOldPin">
-  </mat-form-field>
-</ng-container>
+
+<form class="form" [formGroup]="formData" (ngSubmit)="OnSubmit()">
+
+  <label for="old-pin">Old PIN: </label>
+  <input id="old-pin" type="number" placeholder="0000" formControlName="oldPin" (selectionChange)="ApplyValidation()" />
+
+  <br />
+  <br />
+
+  <label for="new-pin">New PIN: </label>
+  <input id="new-pin" type="number" formControlName="newPin" />
+
+  <br />
+  <br />
+
+  <label for="confirm-new-pin">Confirm New PIN: </label>
+  <input id="confirm-new-pin" type="number" formControlName="ConfirmNewPin" />
+
+  <br />
+  <br />
+
+  <button type="submit" [disabled]="!formData.valid">Change PIN</button>
+
+</form>

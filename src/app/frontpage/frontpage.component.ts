@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-frontpage',
@@ -8,6 +8,8 @@ import { Component, OnInit, Output } from '@angular/core';
 export class FrontpageComponent implements OnInit {
 
   @Output() selectedIndex = true;
+  @Input() userAccountNumber = '';
+
 
   constructor(
     
