@@ -1,0 +1,16 @@
+<mat-tab-group *ngIf="selectedIndex!=undefined">
+  <mat-tab label="sample">sample</mat-tab>
+  <mat-tab label="Check Balance">
+    <app-checkbalance></app-checkbalance>
+  </mat-tab>
+  <mat-tab label="Fund Transfer">
+    <app-fundtransfer></app-fundtransfer>
+  </mat-tab>
+  <mat-tab label="Issue Chequebook">
+    <app-issuecheque></app-issuecheque>
+  </mat-tab>
+  <mat-tab label="Change PIN">
+    <app-changepin></app-changepin>
+  </mat-tab>
+</mat-tab-group>
+
