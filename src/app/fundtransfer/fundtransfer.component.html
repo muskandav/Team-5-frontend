@@ -24,8 +24,16 @@
   <br />
   <br />
 
+  <!--<label for="beneficiary-Account-type">Beneficiary Account Type: </label>
+  <input id="beneficiary-Account-type" type="number" formControlName="beneficiaryAccType" />-->
+
   <label for="beneficiary-Account-type">Beneficiary Account Type: </label>
-  <input id="beneficiary-Account-type" type="number" formControlName="beneficiaryAccType" />
+  <select formControlName="beneficiaryAccType">
+    <option disabled>Select Account Type</option>
+    <option>Choose Account Type</option>
+    <option *ngFor="let type of accTypes">{{type}}</option>
+  </select>
+  
 
   <br />
   <br />

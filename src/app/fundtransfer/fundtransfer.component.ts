@@ -12,6 +12,8 @@ export class FundtransferComponent implements OnInit {
   public showMsg: boolean = false;
   public msg: string = 'Transfer Successful';
 
+  accTypes: string[] = ['Salary', 'Savings', 'Current'];
+
   formData = new FormGroup({
     fromAccount: new FormControl('accNumber', [Validators.required]),
     beneficiaryAcc: new FormControl('', [Validators.required]),
@@ -22,6 +24,10 @@ export class FundtransferComponent implements OnInit {
   OnSubmit(): void {
     console.log(this.formData.value);
     this.showMsg = true;
+  }
+
+  get f() {
+    return this.formData.controls;
   }
 
   constructor() { }

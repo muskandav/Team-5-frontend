@@ -13,6 +13,9 @@ export class OpenfdComponent implements OnInit {
 
   @Input() accNumber = '';
 
+  fdPeriods: string[] = ['1', '2', '3', '4', '5'];
+  fdProducts: string[] = ['Standard', 'Tax Savings', 'Special', 'Corporate', 'Regular', 'Senior Citizen', 'Flexi'];
+
   formData = new FormGroup({
     fromAcc: new FormControl('', [Validators.required]),
     fdProduct: new FormControl('', [Validators.required]),

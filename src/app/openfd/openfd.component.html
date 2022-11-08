@@ -19,13 +19,24 @@
   <br />
 
   <label for="fd-product">FD Product: </label>
-  <input id="fd-product" formControlName="fdProduct" />
+  <!--<input id="fd-product" formControlName="fdProduct" />-->
+
+  <select formControlName="fdProduct">
+    <option disabled>Select FD Product</option>
+    <option>Choose FD Product</option>
+    <option *ngFor="let product of fdProducts">{{product}}</option>
+  </select>
 
   <br />
   <br />
 
-  <label for="fd-period">FD Period: </label>
-  <input id="fd-period" formControlName="fdPeriod" />
+  <label for="fd-period">FD Period (in Years): </label>
+  <!--<input id="fd-period" formControlName="fdPeriod" />-->
+  <select formControlName="fdPeriod">
+    <option disabled>Select FD Period</option>
+    <option>Choose FD Period</option>
+    <option *ngFor="let period of fdPeriods">{{period}}</option>
+  </select>
 
   <br />
   <br />
