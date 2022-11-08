@@ -9,6 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FundtransferComponent implements OnInit {
 
   @Input() accNumber = '';
+  public showMsg: boolean = false;
+  public msg: string = 'Transfer Successful';
 
   formData = new FormGroup({
     fromAccount: new FormControl('accNumber', [Validators.required]),
@@ -19,6 +21,7 @@ export class FundtransferComponent implements OnInit {
 
   OnSubmit(): void {
     console.log(this.formData.value);
+    this.showMsg = true;
   }
 
   constructor() { }

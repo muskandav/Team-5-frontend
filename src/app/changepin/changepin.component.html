@@ -3,6 +3,15 @@
 
 <form class="form" [formGroup]="formData" (ngSubmit)="OnSubmit()">
 
+  <div class="row" *ngIf="showMsg">
+    <div class="col-xs-12">
+      <p class="alert alert-success">
+        <strong>{{msg}}</strong>
+
+      </p>
+    </div>
+  </div>
+
   <label for="old-pin">Old PIN: </label>
   <input id="old-pin" type="number" placeholder="0000" formControlName="oldPin" (selectionChange)="ApplyValidation()" />
 

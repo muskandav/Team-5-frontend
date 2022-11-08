@@ -1,0 +1,41 @@
+<h3 class="header">Open new FD</h3>
+
+
+<form class="form" [formGroup]="formData" (ngSubmit)="OnSubmit()">
+
+  <div class="row" *ngIf="showMsg">
+    <div class="col-xs-12">
+      <p class="alert alert-success">
+        <strong>{{msg}}</strong>
+
+      </p>
+    </div>
+  </div>
+
+  <label for="from-account">From Account: </label>
+  <input id="from-account" type="number" placeholder="0000" formControlName="fromAcc" />
+
+  <br />
+  <br />
+
+  <label for="fd-product">FD Product: </label>
+  <input id="fd-product" formControlName="fdProduct" />
+
+  <br />
+  <br />
+
+  <label for="fd-period">FD Period: </label>
+  <input id="fd-period" formControlName="fdPeriod" />
+
+  <br />
+  <br />
+
+  <label for="amount">Amount: </label>
+  <input id="amount" type="number" formControlName="amount" />
+
+  <br />
+  <br />
+
+  <button type="submit" [disabled]="!formData.valid">Change PIN</button>
+
+</form>

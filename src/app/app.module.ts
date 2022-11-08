@@ -13,6 +13,8 @@ import { CheckbalanceComponent } from './checkbalance/checkbalance.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
+import { OpenfdComponent } from './openfd/openfd.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { CommonModule } from '@angular/common';
     FundtransferComponent,
     IssuechequeComponent,
     FrontpageComponent,
-    CheckbalanceComponent
+    CheckbalanceComponent,
+    OpenfdComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule,
     CommonModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatRadioModule
   ],
   providers: [
 

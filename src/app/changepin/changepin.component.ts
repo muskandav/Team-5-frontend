@@ -8,6 +8,9 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   encapsulation: ViewEncapsulation.None,
 })
 export class ChangepinComponent {
+
+  public showMsg: boolean = false;
+  public msg: string = '';
     
   formData = new FormGroup({
     oldPin: new FormControl('', [Validators.required]),
@@ -21,9 +24,13 @@ export class ChangepinComponent {
     if (newP == Confirmnew) {
       console.log(this.formData.value);
       console.log(this.formData.valid);
+      this.msg = 'PIN changed!';
+      this.showMsg = true;
     }
     else {
       console.log("Should be the same as New Pin");
+      this.msg = 'Confirm PIN should be the same as new PIN.';
+      this.showMsg = true;
     }
     
   }

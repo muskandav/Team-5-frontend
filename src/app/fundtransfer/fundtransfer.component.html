@@ -3,8 +3,17 @@
 
 <form class="form" [formGroup]="formData" (ngSubmit)="OnSubmit()">
 
+  <div class="row" *ngIf="showMsg">
+    <div class="col-xs-12">
+      <p class="alert alert-success">
+        <strong>{{msg}}</strong>
+
+      </p>
+    </div>
+  </div>
+
   <label for="acc-Number">From Account: </label>
-  <input id="accNumber" type="number" formControlName="fromAccount"  />
+  <input id="accNumber" type="number" formControlName="fromAccount" />
 
   <br />
   <br />
